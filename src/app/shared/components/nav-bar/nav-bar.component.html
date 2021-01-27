@@ -1,0 +1,42 @@
+<nav class="ui inverted attached segment">
+  <div class="ui container" [fuiCollapse]="collapse">
+    <div class="ui inverted secondary stackable menu">
+      <h2 class="ui icon header teal">
+        <em data-emoji=":man_in_lotus_position_tone1:">
+          <div class="content">
+            dongsu
+          </div>
+        </em>
+      </h2>
+      <a class="item" [routerLink]="['/']" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"><i
+          class="home icon"></i>ホーム</a>
+      <a class="item" routerLink="/category" routerLinkActive="active"><i class="idea icon"></i>カテゴリー</a>
+      <a class="item" routerLink="/tag" routerLinkActive="active"><i class="tags icon"></i>タグ</a>
+      <a class="item" routerLink="/article" routerLinkActive="active"><i class="clone icon"></i>記事</a>
+      <a class="item" routerLink="/about" routerLinkActive="active"><i class="info icon"></i>私について</a>
+      <a class="item" routerLink="/error" routerLinkActive="active"><i class="info icon"></i>エラー</a>
+      <a class="item" routerLink="/notfound" routerLinkActive="active"><i class="info icon"></i>404</a>
+      <a class="item" routerLink="/forbidden" routerLinkActive="active"><i class="info icon"></i>403</a>
+      <div class="right item">
+        <div class="ui icon input">
+          <input type="text" placeholder="検索...">
+          <i class="search link icon"></i>
+        </div>
+        <div class="ui dropdown item" fuiDropdown>
+          <div class="text">
+            <img class="ui avatar image" src="https://unsplash.it/100/100?image=1005">
+            dongsu
+          </div>
+          <i class="dropdown icon"></i>
+          <div class="menu" fuiDropdownMenu>
+            <a href="#" class="item">ログアウト</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <a class="ui menu toggle black icon button m-left-top" (click)="collapse = !collapse">
+    <i class="sidebar icon"></i>
+  </a>
+</nav>
